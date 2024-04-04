@@ -76,7 +76,7 @@ function randbot(nfollwer){
 
         setTimeout(() => {
             window.location.reload();
-        }, getRandomDelay(3700)*10);
+        }, getRandomDelay(5450)*10);
     }
 
 
