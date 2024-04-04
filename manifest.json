@@ -1,0 +1,34 @@
+{
+    "manifest_version": 3,
+    "name": "Twitter",
+    "description": "a twitter bot",
+    "version": "1.0",
+    "permissions": [
+      "activeTab",
+      "scripting"
+    ],
+    "icons":
+    {
+     "128": "medias/logo1.png"
+    },
+    "action": {
+      "default_popup": "index.html",
+      "default_icon": "medias/logo1.png"
+    },
+    "content_scripts": [
+      {
+        "js": ["script.js"],
+        "matches": [
+          "<all_urls>"
+        ]
+      }
+    ],
+    "web_accessible_resources": [
+      {
+        "resources": ["popup.js"],
+        
+        "matches": ["<all_urls>"]
+      }
+    ]
+  }
+  

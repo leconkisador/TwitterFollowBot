@@ -1,0 +1,60 @@
+function randbot(){
+
+
+
+
+    const profile = document.querySelector("#react-root > div > div > div.css-175oi2r.r-1f2l425.r-13qz1uu.r-417010.r-18u37iz > header > div > div > div > div:nth-child(1) > div.css-175oi2r.r-15zivkp.r-1bymd8e.r-13qz1uu.r-1awozwy > nav > a:nth-child(9)")  
+    profile.click()
+   
+    
+    setTimeout(() => {
+        const follower = document.querySelector("#react-root > div > div > div.css-175oi2r.r-1f2l425.r-13qz1uu.r-417010.r-18u37iz > main > div > div > div > div > div > div:nth-child(3) > div > div > div > div.css-175oi2r.r-ymttw5.r-ttdzmv.r-1ifxtd0 > div.css-175oi2r.r-13awgt0.r-18u37iz.r-1w6e6rj > div:nth-child(2) > a")
+        follower.click()
+    }, getRandomDelay(3000));
+    
+    setTimeout(() => {
+        const following = document.querySelector("#react-root > div > div > div.css-175oi2r.r-1f2l425.r-13qz1uu.r-417010.r-18u37iz > main > div > div > div > div > div > div.css-175oi2r.r-aqfbo4.r-gtdqiz.r-1gn8etr.r-1g40b8q > div.css-175oi2r.r-1e5uvyk.r-6026j > div:nth-child(2) > nav > div > div.css-175oi2r.r-1adg3ll.r-16y2uox.r-1wbh5a2.r-1pi2tsx > div > div:nth-child(3) > a")
+        following.click()
+    }, getRandomDelay(6000));
+    
+    setTimeout(() => {
+        const firstFollower = document.querySelector("#react-root > div > div > div.css-175oi2r.r-1f2l425.r-13qz1uu.r-417010.r-18u37iz > main > div > div > div > div > div > section > div > div > div:nth-child(1) > div > div > div > div > div.css-175oi2r.r-18kxxzh.r-1kb76zh.r-onrtq4.r-1h0z5md > div > div > div.r-1p0dtai.r-1pi2tsx.r-u8s1d.r-1d2f490.r-ipm5af.r-13qz1uu > div > div.r-1p0dtai.r-1pi2tsx.r-u8s1d.r-1d2f490.r-ipm5af.r-13qz1uu > div > a")
+        firstFollower.click()
+    }, getRandomDelay(8000));
+    
+    setTimeout(() => {
+        const follower = document.querySelector("#react-root > div > div > div.css-175oi2r.r-1f2l425.r-13qz1uu.r-417010.r-18u37iz > main > div > div > div > div > div > div:nth-child(3) > div > div > div > div.css-175oi2r.r-ymttw5.r-ttdzmv.r-1ifxtd0 > div.css-175oi2r.r-13awgt0.r-18u37iz.r-1w6e6rj > div:nth-child(2) > a")
+        follower.click()
+    }, getRandomDelay(10000));
+    
+    setTimeout(() => {
+        const following = document.querySelector("#react-root > div > div > div.css-175oi2r.r-1f2l425.r-13qz1uu.r-417010.r-18u37iz > main > div > div > div > div > div > div.css-175oi2r.r-aqfbo4.r-gtdqiz.r-1gn8etr.r-1g40b8q > div.css-175oi2r.r-1e5uvyk.r-6026j > div:nth-child(2) > nav > div > div.css-175oi2r.r-1adg3ll.r-16y2uox.r-1wbh5a2.r-1pi2tsx > div > div:nth-child(3) > a")
+        following.click()
+    }, getRandomDelay(12000));
+
+    setTimeout(() => {
+
+        function clickEverySecond(count) {
+            const interval = setInterval(() => {
+                const selector = `#react-root > div > div > div.css-175oi2r.r-1f2l425.r-13qz1uu.r-417010.r-18u37iz > main > div > div > div > div > div > section > div > div > div:nth-child(${count}) > div > div > div > div > div.css-175oi2r.r-1iusvr4.r-16y2uox > div.css-175oi2r.r-1awozwy.r-18u37iz.r-1wtj0ep > div.css-175oi2r.r-19u6a5r > div`;
+                const element = document.querySelector(selector);
+                if (element) {
+                    element.click();
+                    console.log(`Clicked on element ${count}`);
+                    count++;
+                    if (count > 10) {
+                        clearInterval(interval); // Arrête l'intervalle après 10 clics
+                    }
+                } else {
+                    console.error("L'élément n'a pas été trouvé.");
+                    clearInterval(interval); // Arrête l'intervalle si l'élément n'est pas trouvé
+                }
+            }, 1000); // Répète toutes les secondes (1000 millisecondes)
+        }
+
+        clickEverySecond(10);
+
+    }, getRandomDelay(15000));
+    
+}
+
