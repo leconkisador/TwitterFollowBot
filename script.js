@@ -44,7 +44,8 @@ function randbot(nfollwer){
         setTimeout(() => {
 
             function clickEverySecond(nfollwer) {
-                count=2
+                count=1
+                follow =0
                 const interval = setInterval(() => {
                     const selector = `#react-root > div > div > div.css-175oi2r.r-1f2l425.r-13qz1uu.r-417010.r-18u37iz > main > div > div > div > div > div > section > div > div > div:nth-child(${count}) > div > div > div > div > div.css-175oi2r.r-1iusvr4.r-16y2uox > div.css-175oi2r.r-1awozwy.r-18u37iz.r-1wtj0ep > div.css-175oi2r.r-19u6a5r > div`;
                     //               "#react-root > div > div > div.css-175oi2r.r-1f2l425.r-13qz1uu.r-417010.r-18u37iz > main > div > div > div > div > div > section > div > div > div:nth-child(1) > div > div > div > div > div.css-175oi2r.r-1iusvr4.r-16y2uox > div.css-175oi2r.r-1awozwy.r-18u37iz.r-1wtj0ep > div.css-175oi2r.r-19u6a5r > div")
@@ -52,18 +53,28 @@ function randbot(nfollwer){
                     
 
 
+                    if (!element){
+                        count++
+                        console.log("yourself")
 
-                    if (window.getComputedStyle(element).getPropertyValue('background-color')==="rgb(15, 20, 25)") {
+                    }
+                    else if (window.getComputedStyle(element).getPropertyValue('background-color')==="rgb(15, 20, 25)") {
                         element.click();
+                        follow++;
+                        
                         console.log(`Clicked on element ${count}`);
                         count++;
-                        console.log(count+"  "+nfollwer+"   "+ (count > nfollwer))
-                        if (count > nfollwer) {
-                            clearInterval(interval); // Arrête l'intervalle après 10 clics
+                        console.log(count+"  "+nfollwer+"   "+follow+"  "+ (follow*1 == nfollwer*1))
+                        if (follow*1 === nfollwer*1) {
+                            clearInterval(interval);
+                            return
+                            
+                             
                         }
                     } else {
                         count++
-                        console.error("L'élément n'a pas été trouvé.");
+                        console.log("already follow")
+                        
                         
                     }
                 }, 1000); // Répète toutes les secondes (1000 millisecondes)
@@ -83,9 +94,7 @@ function randbot(nfollwer){
    
 
 
-    else{
-        alert("resize the window so the button profile can be clicked")
-    }
+   
     
 }
 
