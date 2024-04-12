@@ -4,9 +4,9 @@ A twitter bot that follow as many people as you want
 ## Description
 
 This is a bot I created the aim is to follow new people, you can change 3 parameters :
--Number of follows
--How many time between 2 waves of follow
--How many waves you want
+   -Number of follows
+   -How many time between 2 waves of follow
+   -How many waves you want
 
 
 
@@ -29,3 +29,8 @@ This is a bot I created the aim is to follow new people, you can change 3 parame
 - **Selecting a Parameter:**
   - Click on the parameter you want to change and click the button, we advice you to not follow too many people in a too short timelapse.
   - Do not enter a negative value or a less than one parrameter for minute.
+ 
+## ERROR :
+
+**size of window**
+   If nothing happend when you clic the button refresh your window and set it on full screen mod
